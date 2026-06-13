@@ -18,4 +18,4 @@ A modern digital clock built using HTML, CSS and JavaScript.
 
 ## Author
 
-Satyam Singhgit
+Satyam Singh
