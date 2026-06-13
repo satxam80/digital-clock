@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+     overflow:hidden; /*Blurred circles screen se bahar ja sakte hain.Ye unwanted scrollbars rokega.*/
+    height:100vh;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+        
+    );
+
+    font-family: "Segoe UI", sans-serif;
+}
+
+h1{
+    color:white;
+    margin-bottom:25px;
+
+    font-size:3rem;
+    letter-spacing:3px;
+}
+.blob{
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    filter: blur(60px);
+
+    z-index:-1;
+}
+.blob1{
+    background:#4f46e5;
+
+    top:15%;
+    left:25%;
+     animation: float 8s ease-in-out infinite;
+}
+.blob2{
+    background:#ec4899;
+
+    bottom:15%;
+    right:25%;
+     animation: float 11s ease-in-out infinite;
+}
+
+#clock{
+
+    font-size:4rem;
+    font-weight:700;
+
+    color:white;
+
+    padding:25px 50px;
+
+    border-radius:25px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(25px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.3);
+        text-shadow:
+0 0 10px rgba(255,255,255,0.65),
+0 0 20px rgba(255,255,255,0.45),
+0 0 40px rgba(255,255,255,0.25);
+transition: 0.3s;
+
+}
+@keyframes float {
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-45px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+#clock:hover{
+
+    transform: scale(1.05);
+
+}
+#day{
+    color:white;
+    font-size: 1.5rem;
+    margin-bottom:10px;
+}
+#date{
+    color:white;
+    font-size:1.2rem;
+    margin-bottom:20px
+}
